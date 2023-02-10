@@ -1,0 +1,23 @@
+### addVehicle
+POST http://localhost:8080/vehicle
+Content-Type: application/json
+
+{
+  "name": "Ford",
+  "vin": "KNJGKSDHFGA513411"
+}
+
+### getAllVehicles
+GET http://localhost:8080/vehicle
+
+### findVehicleById
+< {%
+    request.variables.set("vehicleId", "1")
+%}
+GET http://localhost:8080/vehicle/{{vehicleId}}
+
+### deleteVehicleById
+< {%
+    request.variables.set("vehicleId", "3")
+%}
+DELETE http://localhost:8080/vehicle/{{vehicleId}}
